@@ -7,7 +7,7 @@ export type MainMenuProps = {
 
 export default function MainMenu({ children }: MainMenuProps) {
   return <Main>
-    <div className="w-fit h-fit p-2 flex justify-center items-center" >ERROR</div>
+    <div className="neon-text-red-400 w-fit h-fit p-2 flex justify-center items-center" >ERROR</div>
     <div className="w-fit h-fit p-2 flex justify-center items-center" >SUCCESS</div>
     <div className="w-fit h-fit p-2 flex justify-center items-center" >WARNING</div>
     <div className="w-fit h-fit p-2 flex justify-center items-center" >INVALID</div>

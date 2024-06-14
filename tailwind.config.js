@@ -10,7 +10,7 @@ const textShadowPlugin = ({ theme, addUtilities }) => {
       for (let variant in colors[color]) {
         textShadowUtility[`.scanlines-${color}-${variant}`] = {
           maskImage: `linear-gradient(#0000 10%, ${colors[color][variant]} 90%, #0000 100%)`,
-          maskSize: `100% 2px`
+          maskSize: `100% 3px`
         }
       }
     }
@@ -26,6 +26,7 @@ const scanlinesPlugin = ({ theme, addUtilities }) => {
       for (let variant in colors[color]) {
         scanlinesUtility[`.neon-text-${color}-${variant}`] = {
           textShadow: `0 0 20px ${colors[color][variant]}, 0 0 20px ${colors[color][variant]}, 0 0 30px ${colors[color][variant]}, 0 0 30px ${colors[color][variant]}`,
+          color: `${colors[color][variant]}`
         }
       }
     }
@@ -78,7 +79,9 @@ export default {
     },
   },
   plugins: [
-    plugin(scanlinesPlugin)
+    plugin(scanlinesPlugin),
+    plugin(textShadowPlugin)
+
   ],
 }
 
