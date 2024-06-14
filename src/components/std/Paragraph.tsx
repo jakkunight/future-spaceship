@@ -5,7 +5,7 @@ export type ParagraphProps = HTMLAttributes<HTMLParagraphElement> & {
 };
 
 export default function Paragraph({ children, ...props }: ParagraphProps) {
-  return <p className="text-cyan-100 text-sm font-mono" {...props} >
+  return <p className="text-cyan-50 text-lg font-vt323" {...props} >
     {children}
   </p>;
 }

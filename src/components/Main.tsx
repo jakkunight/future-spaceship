@@ -6,7 +6,7 @@ export type MainProps = HTMLAttributes<HTMLDivElement> & {
 
 export default function Main({ children, ...props }: MainProps) {
   return <footer
-    className="p-2 flex w-[96%] max-h-[90%] min-h-[80%] overflow-scroll border-8 border-double border-cyan-900 m-4"
+    className="p-2 text-lg flex flex-col gap-2 w-[96%] max-h-[90%] min-h-[80%] overflow-scroll border-8 border-double border-cyan-500 m-4"
     {...props} >
     {children}
   </footer>;

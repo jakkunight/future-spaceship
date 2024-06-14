@@ -5,7 +5,7 @@ export type TitleProps = HTMLAttributes<HTMLHeadingElement> & {
 };
 
 export default function Title({ children, ...props }: TitleProps) {
-  return <h1 className="text-cyan-500 font-mono text-xl" {...props} >
+  return <h1 className="text-cyan-500 font-vt323 text-2xl font-extrabold" {...props} >
     {children}
   </h1>;
 }

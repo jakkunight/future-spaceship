@@ -10,7 +10,7 @@ const scanlinesPlugin = ({ theme, addUtilities }) => {
       for (let variant in colors[color]) {
         scanlinesUtility[`.scanlines-${color}-${variant}`] = {
           maskImage: `linear-gradient(#0000 10%, ${colors[color][variant]} 90%, #0000 100%)`,
-          maskSize: `100% 1px`
+          maskSize: `100% 2px`
         }
       }
     }
@@ -25,6 +25,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        vt323: ["VT323", "monospace"]
+      },
       keyframes: {
         oldCrtAnimation: {
           "0%": {
