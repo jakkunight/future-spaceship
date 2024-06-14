@@ -26,7 +26,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        vt323: ["VT323", "monospace"]
+        vt323: ["VT323", "monospace"],
+        bigblueterm: ["bigblueterm", "sans-serif"]
       },
       keyframes: {
         oldCrtAnimation: {
@@ -36,10 +37,28 @@ export default {
           "100%": {
             backgroundPosition: "0 1000vh",
           }
+        },
+        flashingAlert: {
+          "100%": {
+            textShadow: "0 0 20px, 0 0 20px, 0 0 30px, 0 0 30px",
+            backgroundColor: "rgba(0, 0, 0, 0.0)",
+            opacity: "100%"
+          },
+          "50%": {
+            textShadow: "0 0 20px, 0 0 20px, 0 0 30px, 0 0 30px",
+            backgroundColor: "rgba(0, 0, 0, 0.0)",
+            opacity: "100%"
+          },
+          "0%": {
+            textShadow: "0 0 20px, 0 0 20px, 0 0 30px, 0 0 30px",
+            backgroundColor: "rgba(0, 0, 0, 0.0)",
+            opacity: "0%"
+          }
         }
       },
       animation: {
         oldcrt: "oldCrtAnimation 100s linear infinite",
+        flashalert: "flashingAlert 1s ease-in-out infinite"
       },
     },
   },

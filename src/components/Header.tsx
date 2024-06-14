@@ -5,10 +5,10 @@ export type HeaderProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 export default function Header({ children, ...props }: HeaderProps) {
-  return <footer
-    className="flex justify-start p-4 items-center w-screen h-full gap-4"
+  return <header
+    className="flex justify-start p-4 items-center w-screen h-fit gap-4"
     {...props} >
     {children}
-  </footer>;
+  </header>;
 }
 

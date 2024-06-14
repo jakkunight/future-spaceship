@@ -4,13 +4,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Title from "./components/std/Title.tsx";
 import Button from "./components/std/Button.tsx";
-import Paragraph from "./components/std/Paragraph.tsx";
+import Text from "./components/std/Text.tsx";
 import Input from "./components/std/Input.tsx";
 
 import MainMenu from "./displays/MainMenu.tsx";
 
 export default function App() {
-  return <div className="w-screen h-screen bg-black">
+  return <div className="w-full min-h-screen bg-black">
     <Display>
       <Header>
         <Title>The ALI Project</Title>
@@ -20,12 +20,12 @@ export default function App() {
       </Header>
       <MainMenu />
       <Footer>
-        <Paragraph>
-          (C) 2024~2034 @jakkunight - All rights reserved.
-        </Paragraph>
-        <Paragraph>
+        <Text>
+          ̉̉̉̉(C) 2024-2034 @jakkunight - All rights reserved.
+        </Text>
+        <Text>
           <a href="https://github.com/jakkunight/future-spaceship/" target="_blank">https://github.com/jakkunight/future-spaceship/</a>
-        </Paragraph>
+        </Text>
       </Footer>
     </Display>
   </div>;

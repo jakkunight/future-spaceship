@@ -6,3 +6,13 @@
   font-family: "vt323";
   src: url("./assets/VT323-Regular.ttf");
 }
+
+@font-face {
+  font-family: "bigblueterm";
+  src: url("./assets/BigBlueTerm437NerdFont-Regular.ttf"),
+    url("./assets/BigBlueTerm437NerdFontMono-Regular.ttf"),
+    url("./assets/BigBlueTerm437NerdFontPropo-Regular.ttf"),
+    url("./assets/BigBlueTermPlusNerdFont-Regular.ttf"),
+    url("./assets/BigBlueTermPlusNerdFontPropo-Regular.ttf"),
+    url("./assets/BigBlueTermPlusNerdFontMono-Regular.ttf");
+}
