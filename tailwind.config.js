@@ -2,15 +2,30 @@
 
 const plugin = require("tailwindcss/plugin");
 
+const textShadowPlugin = ({ theme, addUtilities }) => {
+  const textShadowUtility = {};
+  const colors = theme("colors");
+  for (let color in colors) {
+    if (typeof colors[color] === "object") {
+      for (let variant in colors[color]) {
+        textShadowUtility[`.scanlines-${color}-${variant}`] = {
+          maskImage: `linear-gradient(#0000 10%, ${colors[color][variant]} 90%, #0000 100%)`,
+          maskSize: `100% 2px`
+        }
+      }
+    }
+  }
+  addUtilities(textShadowUtility);
+};
+
 const scanlinesPlugin = ({ theme, addUtilities }) => {
   const scanlinesUtility = {};
   const colors = theme("colors");
   for (let color in colors) {
     if (typeof colors[color] === "object") {
       for (let variant in colors[color]) {
-        scanlinesUtility[`.scanlines-${color}-${variant}`] = {
-          maskImage: `linear-gradient(#0000 10%, ${colors[color][variant]} 90%, #0000 100%)`,
-          maskSize: `100% 2px`
+        scanlinesUtility[`.neon-text-${color}-${variant}`] = {
+          textShadow: `0 0 20px ${colors[color][variant]}, 0 0 20px ${colors[color][variant]}, 0 0 30px ${colors[color][variant]}, 0 0 30px ${colors[color][variant]}`,
         }
       }
     }
