@@ -10,7 +10,7 @@ const textShadowPlugin = ({ theme, addUtilities }) => {
       for (let variant in colors[color]) {
         textShadowUtility[`.scanlines-${color}-${variant}`] = {
           maskImage: `linear-gradient(#0000 10%, ${colors[color][variant]} 90%, #0000 100%)`,
-          maskSize: `100% 3px`
+          maskSize: `100% 2px`
         }
       }
     }
