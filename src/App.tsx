@@ -3,20 +3,17 @@ import Display from "./components/Display";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Title from "./components/std/Title.tsx";
-import Button from "./components/std/Button.tsx";
 import Text from "./components/std/Text.tsx";
-import Input from "./components/std/Input.tsx";
+import Clock from "./components/std/Clock.tsx";
 
 import MainMenu from "./displays/MainMenu.tsx";
 
 export default function App() {
-  return <div className="w-full min-h-screen bg-black">
+  return <div className="w-full min-h-screen bg-black overflow-clip">
     <Display>
       <Header>
-        <Title>The ALI Project</Title>
-        <Button>Matrix Calc</Button>
-        <Button>Sci Calc</Button>
-        <Button>Vector Calc</Button>
+        <img src="/free-scada-logo-dark.svg" alt="Starfleet" width="4%" height="4%" />
+        <Clock />
       </Header>
       <MainMenu />
       <Footer>
